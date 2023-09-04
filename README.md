@@ -111,7 +111,8 @@ pm2 startup && pm2 save
 
 ***
 
-![image](https://github.com/MakeToMe/remote/assets/137015334/737dcf1e-503b-4827-8b7d-bbe95f0fc78d)
+![image](https://github.com/MakeToMe/remote/assets/137015334/1a3e3f59-0606-4f4c-973c-35f0b15d5fc3)
+
 
 (https://api.whatsapp.com/send?phone=5511949181591)
 
