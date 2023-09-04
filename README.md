@@ -16,58 +16,66 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.bashrc
 ```
 
-### 3) INSTALAR O NODE.JS 16.X
+#### 3) INSTALAR O NODE.JS 16.X
 
 ```bash
 nvm install 16
 ```
 
-### 4) CONFIRMAR A VERSÃO DO NODE.JS
+#### 4) CONFIRMAR A VERSÃO DO NODE.JS
 
 ```bash
 nvm use 16
 ```
 
-### 5) INSTALAR O GIT
+#### 5) INSTALAR O GIT
 
 ```bash
 sudo apt-get update && sudo apt-get install git
 ```
 
-### 6) REALIZAR O CLONE DO PROJETO PARA PASTA EXECUTE
+#### 6) REALIZAR O CLONE DO PROJETO PARA PASTA EXECUTE
 
 ```bash
 git clone https://github.com/MakeToMe/remote.git execute
 
 ```
 
-### 7) ENTRAR NA PASTA EXECUTE
+#### 7) ENTRAR NA PASTA EXECUTE
 
 ```bash
 cd \execute
 ```
 
-### 8) INICIAR O PROJETO
+#### 8) INICIAR O PROJETO
 
 ```bash
 npm init -y
 ```
 
-### 9) INSTALAR A BIBLIOTECA EXPRESS PARA CRIAR AS ROTAS
+#### 9) INSTALAR A BIBLIOTECA EXPRESS PARA CRIAR AS ROTAS
 
 ```bash
 npm install express
 ```
 
-### 10) INSTALAR A BIBLIOTECA CHILD_PROCESS PARA EXECUTAR OS COMANDOS NA VM
+#### 10) INSTALAR A BIBLIOTECA CHILD_PROCESS PARA EXECUTAR OS COMANDOS NA VM
 
 ```bash
 npm install child_process
 ```
 
 
-### 10) INSTALAR A BIBLIOTECA CHILD_PROCESS PARA PROCESSAR O CORPO JSON
+#### 10) INSTALAR A BIBLIOTECA CHILD_PROCESS PARA PROCESSAR O CORPO JSON
 
 ```bash
 npm install body-parser
 ```
+
+<div style="background-color: gray; color: white; padding: 10px; display: inline-block;">
+  Contato: 81999748805
+</div>
+
+<div style="background-color: green; color: white; padding: 10px; display: inline-block;">
+  Número: 123456789
+</div>
