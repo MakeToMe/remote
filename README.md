@@ -73,11 +73,13 @@ npm install body-parser
 
 #### 11) EDITAR O ARQUIVO DO PROJETO 
 
-![image](https://github.com/MakeToMe/remote/assets/137015334/6b076595-ec17-4b97-a4e1-625c29cfbcea)
-
 ```bash
 nano execute.js
 ```
+
+![image](https://github.com/MakeToMe/remote/assets/137015334/6b076595-ec17-4b97-a4e1-625c29cfbcea)
+
+###### Insira o IP da sua VM e o seu Token de Segurança
 
 
 :grey_exclamation: **Contato:** 81999748805
