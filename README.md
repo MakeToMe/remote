@@ -71,8 +71,6 @@ npm install child_process
 npm install body-parser
 ```
 
-***
-
 #### 11) EDITAR O ARQUIVO DO PROJETO 
 
 ```bash
@@ -89,13 +87,16 @@ nano execute.js
 npm install -g pm2
 ```
 
----
-
 #### 13) INICIAR O PROJETO NO PM2
 
 ```bash
 npm install -g pm2
 ```
+
+***
+
+> Isso é um exemplo de bloco de citação.
+> Ele pode ser usado para destacar informações importantes ou para criar uma caixa de diálogo.
 
 
 
