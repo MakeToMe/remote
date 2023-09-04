@@ -1,6 +1,5 @@
 # execute.js
 ## Bem-vindo ao execute.js. Esta API foi desenvolvida para permitir a execução de comandos remotamente em servidores virtuais. Abaixo, você encontrará um guia simples para instalar e começar a usar a API.
-***
 
 Passo a passo para instalação
 
