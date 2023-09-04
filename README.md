@@ -65,7 +65,7 @@ npm install express
 npm install child_process
 ```
 
-#### 10) INSTALAR A BIBLIOTECA CHILD_PROCESS PARA PROCESSAR O CORPO JSON
+#### 10) INSTALAR A BIBLIOTECA BODY-PARSER PARA PROCESSAR O CORPO JSON
 
 ```bash
 npm install body-parser
@@ -90,7 +90,7 @@ npm install -g pm2
 #### 13) INICIAR O PROJETO NO PM2
 
 ```bash
-npm install -g pm2
+pm2 start execute.js
 ```
 
 #### 13) ADICIONAR O PROJETO NO INIT DO PM2
@@ -106,10 +106,9 @@ pm2 startup && pm2 save
 
 #### 1) ROTA PARA LISTAR SEUS CONTAINERS
 
-```bash
-pm2 startup && pm2 save
-```
+[Link para as Rotas](routes.md)
 
+![image](https://github.com/MakeToMe/remote/assets/137015334/ded19ce4-e13f-46ce-90df-ad234e3b8085)
 
 :grey_exclamation: **Contato:** 81999748805
 
