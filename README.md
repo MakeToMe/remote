@@ -4,13 +4,13 @@
 
 Passo a passo para instalação
 
-### 1) INSTALAR O NODE VERSION MANAGER
+#### 1) INSTALAR O NODE VERSION MANAGER
    
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 ```
 
-### 2) CARREGAR AS CONFIGURAÇÕES DO NVM
+#### 2) CARREGAR AS CONFIGURAÇÕES DO NVM
 
 ```bash
 source ~/.bashrc
