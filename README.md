@@ -28,5 +28,18 @@ nvm install 16
 nvm use 16
 ```
 
-### 5) REALIZAR O CLONE DO PROJETO
+### 5) INSTALAR O GIT
+
+```bash
+sudo apt-get update && sudo apt-get install git
+```
+
+### 6) REALIZAR O CLONE DO PROJETO PARA PASTA EXECUTE
+
+```bash
+git clone https://github.com/MakeToMe/remote.git execute
+
+```
+
+
 
