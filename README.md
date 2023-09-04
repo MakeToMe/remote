@@ -110,6 +110,8 @@ pm2 startup && pm2 save
 
 ![image](https://github.com/MakeToMe/remote/assets/137015334/ded19ce4-e13f-46ce-90df-ad234e3b8085)
 
+<img src="https://github.com/MakeToMe/remote/assets/137015334/ded19ce4-e13f-46ce-90df-ad234e3b8085" alt="Imagem do exemplo" width="200">
+
 :grey_exclamation: **Contato:** 81999748805
 
 :green_heart: **Número:** 123456789
