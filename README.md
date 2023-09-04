@@ -65,14 +65,19 @@ npm install express
 npm install child_process
 ```
 
-
 #### 10) INSTALAR A BIBLIOTECA CHILD_PROCESS PARA PROCESSAR O CORPO JSON
 
 ```bash
 npm install body-parser
 ```
 
-[Visualizar Formatação](styles.html)
+#### 11) EDITAR O ARQUIVO DO PROJETO 
+
+![image](https://github.com/MakeToMe/remote/assets/137015334/6b076595-ec17-4b97-a4e1-625c29cfbcea)
+
+```bash
+nano execute.js
+```
 
 
 :grey_exclamation: **Contato:** 81999748805
