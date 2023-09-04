@@ -93,21 +93,22 @@ npm install -g pm2
 npm install -g pm2
 ```
 
+#### 13) ADICIONAR O PROJETO NO INIT DO PM2
+
+```bash
+pm2 startup && pm2 save
+```
+
 ***
 
-> Isso é um exemplo de bloco de citação.
-> Ele pode ser usado para destacar informações importantes ou para criar uma caixa de diálogo.
+> Após iniciar o projeto no pm2 você deve configurar as rotas das chamadas.
+> As rotas serão utilizadas para receber as requisições externas e executar as funções na VM.
 
-:::
-Esta é uma caixa de destaque usando sintaxe GFM.
-:::
+#### 1) ROTA PARA LISTAR SEUS CONTAINERS
 
-%>% Esta é uma caixa de destaque usando sintaxe do GitLab.
-
-<div style="border: 1px solid #e1e1e1; background-color: #f9f9f9; padding: 10px;">
-  Este é um exemplo de caixa de destaque personalizada.
-</div>
-
+```bash
+pm2 startup && pm2 save
+```
 
 
 :grey_exclamation: **Contato:** 81999748805
