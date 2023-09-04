@@ -41,5 +41,33 @@ git clone https://github.com/MakeToMe/remote.git execute
 
 ```
 
+### 7) ENTRAR NA PASTA EXECUTE
+
+```bash
+cd \execute
+```
+
+### 8) INICIAR O PROJETO
+
+```bash
+npm init -y
+```
+
+### 9) INSTALAR A BIBLIOTECA EXPRESS PARA CRIAR AS ROTAS
+
+```bash
+npm install express
+```
+
+### 10) INSTALAR A BIBLIOTECA CHILD_PROCESS PARA EXECUTAR OS COMANDOS NA VM
+
+```bash
+npm install child_process
+```
 
 
+### 10) INSTALAR A BIBLIOTECA CHILD_PROCESS PARA PROCESSAR O CORPO JSON
+
+```bash
+npm install body-parser
+```
