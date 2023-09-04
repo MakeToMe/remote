@@ -71,19 +71,40 @@ npm install child_process
 npm install body-parser
 ```
 
+***
+
 #### 11) EDITAR O ARQUIVO DO PROJETO 
 
 ```bash
 nano execute.js
 ```
 
+###### Insira o IP da sua VM e o seu Token de Segurança. Em seguida salve e feche o arquivo (ctrl + x) ( y ) (enter)
 ![image](https://github.com/MakeToMe/remote/assets/137015334/6b076595-ec17-4b97-a4e1-625c29cfbcea)
 
-###### Insira o IP da sua VM e o seu Token de Segurança
+
+#### 12) INSTALAR O PM2 GLOBALMENTE (caso já tenha instalado pule para etapa seguinte)
+
+```bash
+npm install -g pm2
+```
+
+---
+
+#### 13) INICIAR O PROJETO NO PM2
+
+```bash
+npm install -g pm2
+```
+
+
+
+
 
 
 :grey_exclamation: **Contato:** 81999748805
 
 :green_heart: **Número:** 123456789
 
+fdsf
 
