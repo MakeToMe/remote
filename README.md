@@ -99,6 +99,10 @@ npm install -g pm2
 > Ele pode ser usado para destacar informações importantes ou para criar uma caixa de diálogo.
 
 
+<div style="border: 2px solid #ccc; padding: 10px;">
+  Esta é uma caixa de estilo personalizado.
+  Você pode definir propriedades de estilo como bordas, cores e preenchimento.
+</div>
 
 
 
