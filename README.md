@@ -72,19 +72,8 @@ npm install child_process
 npm install body-parser
 ```
 
-<div style="background-color: gray; color: white; padding: 10px; display: inline-block;">
-  Contato: 81999748805
-</div>
+:grey_exclamation: **Contato:** 81999748805
 
-<div style="background-color: green; color: white; padding: 10px; display: inline-block;">
-  Número: 123456789
-</div>
+:green_heart: **Número:** 123456789
 
-<div style="background-color: gray; color: white; padding: 10px; display: inline-block;">
-  Contato: 81999748805
-</div>
-
-<div style="background-color: green; color: white; padding: 10px; display: inline-block;">
-  Número: 123456789
-</div>
 
