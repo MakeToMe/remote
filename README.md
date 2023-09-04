@@ -101,12 +101,10 @@ pm2 startup && pm2 save
 
 
 ***
->
 > Após iniciar o projeto no pm2 você deve configurar as rotas das chamadas.
 > As rotas serão utilizadas para receber as requisições externas e executar as funções na VM.
 >
 > [Link para as Rotas](routes.md)
->
 ***
 
 📞 +55(11)9.4918-1591 │ Flávio Guardia
