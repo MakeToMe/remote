@@ -111,6 +111,5 @@ pm2 startup && pm2 save
 
 ***
 
-📞 +55(11)9.4918-1591
-Flávio Guardia
+📞 +55(11)9.4918-1591 │ Flávio Guardia
 
