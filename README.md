@@ -72,6 +72,9 @@ npm install child_process
 npm install body-parser
 ```
 
+[Visualizar Formatação](styles.html)
+
+
 :grey_exclamation: **Contato:** 81999748805
 
 :green_heart: **Número:** 123456789
