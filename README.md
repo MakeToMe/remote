@@ -98,12 +98,15 @@ npm install -g pm2
 > Isso é um exemplo de bloco de citação.
 > Ele pode ser usado para destacar informações importantes ou para criar uma caixa de diálogo.
 
+:::
+Esta é uma caixa de destaque usando sintaxe GFM.
+:::
 
-<div style="border: 2px solid #ccc; padding: 10px;">
-  Esta é uma caixa de estilo personalizado.
-  Você pode definir propriedades de estilo como bordas, cores e preenchimento.
+%>% Esta é uma caixa de destaque usando sintaxe do GitLab.
+
+<div style="border: 1px solid #e1e1e1; background-color: #f9f9f9; padding: 10px;">
+  Este é um exemplo de caixa de destaque personalizada.
 </div>
-
 
 
 
