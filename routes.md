@@ -9,7 +9,7 @@
 
 # ⚠️ Alerta Importante
 #### A rota /executar descrita no item 5 confere amplos poderes para executar qualquer comando remotamente na VM. Portanto deve seu utilização deve ser precedida de bastante cautala para evitar o envio de comandos que possam danificar o sistema.
-
+***
 
 #### 1) CHAMADA PARA LISTAR TODOS OS CONTAINERS DA VM EM ORDEM ALFABÉTICA
    
