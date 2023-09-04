@@ -8,13 +8,13 @@ Passo a passo para instalação
    
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-,
+```
 
 2) CARREGAR AS CONFIGURAÇÕES DO NVM
 
 ```bash
 source ~/.bashrc
-,
+```
 
 3) INSTALAR O NODE.JS 16.X
 
