@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 //Parâmetros padrão do servidor, porta e token de segurança
 const app = express();
 const porta = 8385; // Porta em que o servidor irá escutar
-const ip = '  SEU_IP_AQUI'; // Adicione o o IP do seu servidor
+const ip = 'SEU_IP_AQUI'; // Adicione o o IP do seu servidor
 const token = 'SEU_TOKEN'; // Defina o seu token aqui
 
 // Configurar o body-parser para analisar requisições POST em formato JSON
