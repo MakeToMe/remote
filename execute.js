@@ -7,8 +7,8 @@ const bodyParser = require('body-parser');
 //Parâmetros padrão do servidor, porta e token de segurança
 const app = express();
 const porta = 8385; // Porta em que o servidor irá escutar
-const ip = 'seu_ip_aqui'; // Adicione o o IP do seu servidor
-const token = 'seu_token_aqui'; // Defina o seu token aqui
+const ip = '134.195.90.13'; // Adicione o o IP do seu servidor
+const token = '@Praise_Server'; // Defina o seu token aqui
 
 // Configurar o body-parser para analisar requisições POST em formato JSON
 app.use(bodyParser.json());
@@ -99,68 +99,96 @@ app.get('/listexited', (req, res) => {
 });
 
 
-// Endpoint para reiniciar e parar um container especificado
+// Endpoint para reiniciar e parar um container com base no radical do nome
 app.post('/restartcontainer', (req, res) => {
-  const { 'Nome do container': nomeContainer } = req.body;
+  const { radicalDoNomeContainer } = req.body;
 
-  if (!nomeContainer) {
-    return res.status(400).json({ error: 'Nome do container não informado' });
+  if (!radicalDoNomeContainer) {
+    return res.status(400).json({ error: 'Radical do nome do container não informado' });
   }
 
-  const comandoRestartContainer = `docker restart ${nomeContainer}`;
-  const comandoStopContainer = `docker stop ${nomeContainer}`;
-
-  // Executar o comando "restart" na VM usando child_process
-  exec(comandoRestartContainer, (error, stdoutRestart, stderrRestart) => {
+  // Listar os containers usando a CLI do Docker
+  exec('docker ps -a --format "{{.Names}}"', (error, stdout, stderr) => {
     if (error) {
-      console.error(`Erro ao reiniciar o container: ${error.message}`);
-      return res.status(500).json({ error: 'Erro ao reiniciar o container' });
+      console.error(`Erro ao listar os containers: ${error.message}`);
+      return res.status(500).json({ error: 'Erro ao listar os containers' });
     }
 
-    // Executar o comando "stop" na VM usando child_process
-    exec(comandoStopContainer, (error, stdoutStop, stderrStop) => {
-      if (error) {
-        console.error(`Erro ao parar o container: ${error.message}`);
-        return res.status(500).json({ error: 'Erro ao parar o container' });
-      }
+    const containers = stdout.split('\n').filter((container) => container.includes(radicalDoNomeContainer));
 
-      // Enviar o conteúdo do LOG como resposta
-      res.json({ logRestart: stdoutRestart, logStop: stdoutStop });
+    if (containers.length === 0) {
+      return res.status(404).json({ error: 'Nenhum container encontrado com base no radical do nome' });
+    }
+
+    containers.forEach((nomeContainer) => {
+      const comandoRestartContainer = `docker restart ${nomeContainer}`;
+      const comandoStopContainer = `docker stop ${nomeContainer}`;
+
+      // Executar o comando "restart" na VM usando child_process
+      exec(comandoRestartContainer, (errorRestart, stdoutRestart, stderrRestart) => {
+        if (errorRestart) {
+          console.error(`Erro ao reiniciar o container ${nomeContainer}: ${errorRestart.message}`);
+        } else {
+          console.log(`Container ${nomeContainer} reiniciado com sucesso`);
+        }
+
+        // Executar o comando "stop" na VM usando child_process
+        exec(comandoStopContainer, (errorStop, stdoutStop, stderrStop) => {
+          if (errorStop) {
+            console.error(`Erro ao parar o container ${nomeContainer}: ${errorStop.message}`);
+          } else {
+            console.log(`Container ${nomeContainer} parado com sucesso`);
+          }
+        });
+      });
     });
+
+    res.json({ message: 'Operações em containers concluídas' });
   });
 });
 
-// Endpoint para excluir um container especificado
-app.post('/deletecontainer', (req, res) => {
-  const { 'Nome do container': nomeContainer } = req.body;
 
-  if (!nomeContainer) {
-    return res.status(400).json({ error: 'Nome do container não informado' });
+// Endpoint para excluir um container com base no radical do nome
+app.post('/deletecontainer', (req, res) => {
+  const { radicalDoNomeContainer } = req.body;
+
+  if (!radicalDoNomeContainer) {
+    return res.status(400).json({ error: 'Radical do nome do container não informado' });
   }
 
-  const comandoDeleteContainer = `docker rm ${nomeContainer}`;
-
-  // Executar o comando "delete" na VM usando child_process
-  exec(comandoDeleteContainer, (error, stdoutDelete, stderrDelete) => {
+  // Listar os containers usando a CLI do Docker
+  exec('docker ps -a --format "{{.Names}}"', (error, stdout, stderr) => {
     if (error) {
-      console.error(`Erro ao excluir o container: ${error.message}`);
-      return res.status(500).json({ error: 'Erro ao excluir o container' });
+      console.error(`Erro ao listar os containers: ${error.message}`);
+      return res.status(500).json({ error: 'Erro ao listar os containers' });
     }
 
-    // Remover o "\n" do final da string
-    const logFormatado = stdoutDelete.trim();
+    const containers = stdout.split('\n').filter((container) => container.includes(radicalDoNomeContainer));
 
-    // Verificar se o container foi excluído com sucesso
-    if (logFormatado.includes(nomeContainer)) {
-      // Enviar o conteúdo do LOG como resposta
-      res.json({ logDelete: logFormatado });
-    } else {
-      return res.status(404).json({ error: 'Container não encontrado ou não foi possível excluir' });
+    if (containers.length === 0) {
+      return res.status(404).json({ error: 'Nenhum container encontrado com base no radical do nome' });
     }
+
+    containers.forEach((nomeContainer) => {
+      const comandoDeleteContainer = `docker rm ${nomeContainer}`;
+
+      // Executar o comando "delete" na VM usando child_process
+      exec(comandoDeleteContainer, (errorDelete, stdoutDelete, stderrDelete) => {
+        if (errorDelete) {
+          console.error(`Erro ao excluir o container ${nomeContainer}: ${errorDelete.message}`);
+        } else {
+          console.log(`Container ${nomeContainer} excluído com sucesso`);
+        }
+      });
+    });
+
+    res.json({ message: 'Operações em containers concluídas' });
   });
 });
+
 
 // Iniciar o servidor
 app.listen(porta, ip, () => {
   console.log(`Servidor rodando em http://${ip}:${porta}`);
 });
+
