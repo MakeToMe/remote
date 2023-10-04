@@ -1,8 +1,19 @@
 //Bibliotecas necessárias para executar as funções
-
 const express = require('express');
 const { exec } = require('child_process');
 const bodyParser = require('body-parser');
+const multer = require('multer');
+const storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, './') // Armazena o arquivo na pasta raiz do projeto.
+    },
+    filename: function(req, file, cb) {
+        cb(null, file.originalname); // Salva o arquivo com o nome original.
+    }
+});
+
+const upload = multer({ storage: storage });
+
 
 //Parâmetros padrão do servidor, porta e token de segurança
 const app = express();
@@ -184,6 +195,15 @@ app.post('/deletecontainer', (req, res) => {
 
     res.json({ message: 'Operações em containers concluídas' });
   });
+});
+
+      // Endpoint para receber upload de arquivo
+app.post('/upload', upload.single('arquivo'), (req, res) => {
+    if (!req.file) {
+        return res.status(400).json({ error: 'Arquivo não enviado' });
+    }
+    // Aqui, o arquivo foi salvo no diretório especificado e você pode realizar as operações desejadas com ele.
+    res.json({ message: 'Arquivo recebido com sucesso!', filename: req.file.originalname });
 });
 
 
